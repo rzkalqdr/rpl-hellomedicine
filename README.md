@@ -8,7 +8,10 @@ _**RPL:DI - Hello Medicine**_, **work in progress**
 4. Syifa Fauziah (1301194137)
 
 ## Dokumentasi
-Dokumentasi SKPL dan DIPL dapat diakses dalam folder `documentation`.
+Dokumentasi SKPL dan DIPL Hello Medicine dapat diakses dalam folder `documentation`.
 
 ## Webpage
 Webpage Hello Medicine dapat diakses dalam folder `webpage`.
+
+## Database
+Database Hello Medicine dapat diakses dalam repository secara langsung (`hello_medicine.sql`).
