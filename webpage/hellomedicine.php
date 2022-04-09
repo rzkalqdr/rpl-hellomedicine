@@ -5,7 +5,7 @@
         private $username;
         private $password;
 
-        // Methods: idUser
+        // Methods: setter & getter idUser
         function set_idUser($idUser) {
             $this->idUser = $idUser;
         }
@@ -13,8 +13,8 @@
         function get_idUser() {
             return $this->idUser;
         }
-        
-        // Methods: displayName
+
+        // Methods: setter & getter displayName
         function set_displayName($displayName) {
             $this->displayName = $displayName;
         }
@@ -23,7 +23,7 @@
             return $this->displayName;
         }
 
-        // Methods: username
+        // Methods: setter & getter  username
         function set_Username($username) {
             $this->username = $username;
         }
@@ -32,13 +32,23 @@
             return $this->username;
         }
 
-        // Methods: password
+        // Methods: setter & getter password
         function set_Password($password) {
             $this->password = $password;
         }
 
         function get_Password() {
             return $this->password;
+        }
+
+        // Method: registerUser
+        function registerUser($username, $password) {
+            //
+        }
+
+        // Method: changePassword
+        function changePassword() {
+            //
         }
     }
 
