@@ -17,6 +17,13 @@
         font-family: 'Poppins', 'sans-serif';
       }
 
+      body{
+        background-color: #FFFF;
+        background-image: url(dokter.jpeg);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+      }
+
       #btn {
         color: #72C985;
       }
@@ -34,6 +41,26 @@
 
       .hellomed-accent:hover {
         color: #539160 !important;
+        text-decoration: underline;
+      }
+
+      .card {
+        text-align: center;
+        margin-top: 2em;
+        border-radius: 1em;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .card img {
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .imageRight{
+        position: absolute;
+        top: 135px;
+        bottom: 0px;
+        right: 0px;
       }
     </style>
   </head>
@@ -42,7 +69,7 @@
       <div class="container-fluid">
         <div class="col">
           <a class="navbar-brand me-3" href="#">
-            <img src="hellomed.svg" alt="" width="30" height="30" class="d-inline-block align-text-top">
+            <img src="hellomed.svg" alt="" width="40" height="40" class="d-inline-block align-text-top">
             <span id="hellomed-brand">Hello Medicine</span>
           </a>
         </div>
@@ -66,7 +93,7 @@
 
         <div class="col-2">
           <div class="text-end">
-            <button class="btn btn-outline-success me-5" type="button">Login</button> 
+            <button class="btn btn-outline-success me-5" type="button" style="margin-right: 30px;">Login</button> 
             <button class="btn btn-success" type="button">Download</button>
           </div>
         </div>
@@ -74,13 +101,45 @@
       
     </nav>
     
-    <div class="p-5 mb-4 bg-light rounded-3">
+    <div class=" p-5 mb-4 rounded-3">
       <div class="container-fluid py-5">
-        <h1 class="display-5" style="font-weight:1000;">Konsultasi Langsung Dengan Dokter</h1>
-        <p class="col-md-8 fs-4">Chat dokter, kunjungi rumah sakit terdekat, informasi vaksin, beli obat dan artikel seputar kesehatan, tersedia di Hello Medicine!</p>
-        <button class="btn btn-primary btn-lg" type="button">Example button</button>
-      </div>
+        <h1 class="display-5" style="font-weight:1000; font-size: 29px; margin-left: 10px; color: #72C985;">Konsultasi Langsung Dengan Dokter</h1>
+        <p class="col-md-8 fs-4">Chat dokter, kunjungi rumah sakit terdekat, informasi vaksin, beli obat dan<br> artikel seputar kesehatan, tersedia di Hello Medicine!</p>
+          <div class="row">
+            <div class="col-md-2">
+              <div class="card" style="width: 10rem;">
+                <div class="card-body">
+                  <img src="chatdokter.jpeg">
+                  <p class="card-text" style="margin-top: 5px;">Chat Dokter</p>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card" style="width: 10rem;">
+                <div class="card-body">
+                  <img src="chatdokter.jpeg">
+                  <p class="card-text" style="margin-top: 5px;">Vaksinasi</p>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="card" style="width: 10rem;">
+                <div class="card-body">
+                  <img src="chatdokter.jpeg">
+                  <p class="card-text" style="margin-top: 5px;">Beli Obat</p>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- <img src="dokter.jpeg" class="imageRight"> -->
+      </div> 
     </div>
+
+    
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
