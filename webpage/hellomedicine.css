@@ -2,9 +2,9 @@
     font-family: 'Poppins', 'sans-serif';
   }
 
-  body{
+  body {
     background-color: #FFFF;
-    background-image: url(img/icon_doctor2.png);
+    
     background-position: right bottom;
     background-repeat: no-repeat;
   }
@@ -26,6 +26,10 @@
 
   .hellomed-accent:hover {
     color: #539160 !important;
+    /* text-decoration: underline; */
+  }
+
+  .active {
     text-decoration: underline;
   }
 
