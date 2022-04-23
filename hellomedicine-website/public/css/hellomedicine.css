@@ -1,53 +1,60 @@
 * {
     font-family: 'Poppins', 'sans-serif';
-  }
+}
 
-  body {
+body {
     background-color: #FFFF;
-    
+
     background-position: right bottom;
     background-repeat: no-repeat;
-  }
+}
 
-  #btn {
+#btn {
     color: #72C985;
-  }
+}
 
-  #hellomed-brand {
+#hellomed-brand {
     font-family: 'Poppins', 'sans-serif';
     font-size: larger;
     font-weight: 900;
     color: #72C985;
-  }
+}
 
-  .hellomed-accent {
+.hellomed-h1 {
+    font-weight: 1000;
+    font-size: 29px;
+    margin-left: 10px;
+    color: #72C985;
+}
+
+.hellomed-accent {
     color: #72C985 !important;
-  }
+}
 
-  .hellomed-accent:hover {
+.hellomed-accent:hover {
     color: #539160 !important;
     /* text-decoration: underline; */
-  }
+}
 
-  .active {
+.active {
     text-decoration: underline;
-  }
+}
 
-  .card {
+.card {
     text-align: center;
     margin-top: 2em;
     border-radius: 1em;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  }
+}
 
-  .card img {
+.card img {
     width: 50%;
     margin: 0 auto;
-  }
+}
 
-  .imageRight{
+.imageRight {
     position: absolute;
     top: 135px;
     bottom: 0px;
     right: 0px;
-  }
+}
