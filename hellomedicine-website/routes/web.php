@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\RumahSakitController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,11 @@ Route::get('/', function () {
 Route::get('artikel', function () {
     return view('artikel');
 });
+
+Route::get('admin/rumahsakit', [RumahSakitController::class, 'index']);
+
+// Route::get('admin/user', [UserController::index]);
+
+// Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
