@@ -17,8 +17,5 @@
         <li class="nav-item">
             <a class="nav-link <?php echo e(Request::is('/dashboard/apotek') ? 'active' : ''); ?>" style="color: aliceblue" href="/dashboard/apotek"> <span><i class="fa-solid fa-capsules"></i></span> Apotek</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link <?php echo e(Request::is('/dashboard/dokter') ? 'active' : ''); ?>" style="color: aliceblue" href="/dashboard/dokter"> <span><i class="fa-solid fa-user-doctor"></i></span> Dokter</a>
-        </li>
     </ul>
 </nav><?php /**PATH D:\TELU\Semester 6\RPL\web-hellmed\resources\views/dashboardAdmin/layouts/sidebar.blade.php ENDPATH**/ ?>

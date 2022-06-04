@@ -2,7 +2,7 @@
 
 <?php $__env->startSection('content'); ?>
 <div class="col-lg-12">
-    <form action="/dashboard/rumahsakit" method="POST">
+    <form action="/dashboard/rumahsakit" method="POST" enctype="multipart/form-data">
         <?php echo csrf_field(); ?>
         <h3 class="mb-2 text-center">Tambah Rumah Sakit</h3>
             <div class="row mb-3">

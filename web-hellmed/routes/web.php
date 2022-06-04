@@ -22,8 +22,6 @@ use App\Http\Controllers\dashboardDokterController;
 Route::get('/register', [registerController::class, 'index'])->middleware('guest');
 Route::post('/register', [registerController::class, 'store']);
 
-Route::get('/rumahsakit', [rumahSakitController::class, 'index_rs']);
-
 Route::get('/login', [loginController::class, 'index'])->middleware('guest');
 Route::post('/login', [loginController::class, 'authenticate']);
 Route::get('/logout', [loginController::class, 'logout']);
