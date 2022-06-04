@@ -53,5 +53,18 @@
             <button type="submit" name="submit" class="btn btn-primary">Create</button>
     </form>
 </div>
+
+<script>
+    const title = document.querySelector('#title');
+    const slug = document.querySelector('#slug');
+
+    title.addEventListener('change', function(){
+        fetch('/dashboard/artikel/checkSlug?title=' + title.value)
+            .then(response => response.json())
+            .then(data => {
+                slug.value = data.slug;
+            })
+    });
+</script>
     
 @endsection

@@ -17,9 +17,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 
     <!-- Hello Medicine external CSS -->
-    <link rel="stylesheet" href="hellomedicine.css">
+    <link rel="stylesheet" href="{{ asset('css\hellomedicine.css') }}">
     <title>Hello Medicine</title>
 
+    <style>
+    body {
+        background-image: url("{{ asset('img\icon_doctor2.png')}}");
+    }
+    </style>
 </head>
 
 <body>
@@ -27,7 +32,7 @@
         <div class="container-fluid">
             <div class="col">
                 <a class="navbar-brand me-3" href="#">
-                    <img src="img/brand_hellomed.svg" alt="" width="40" height="40"
+                    <img src="{{ asset('img\brand_hellomed.svg') }}" alt="" width="40" height="40"
                         class="d-inline-block align-text-top">
                     <span id="hellomed-brand">Hello Medicine</span>
                 </a>
@@ -39,13 +44,13 @@
             <div class="col-8">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
                     <li class="nav-item me-2">
-                        <a class="nav-link hellomed-accent" href="/hellomedicine_homepage.html">Home</a>
+                        <a class="nav-link hellomed-accent active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item me-2">
-                        <a class="nav-link hellomed-accent active" href="/hellomedicine_artikel.html">Artikel</a>
+                        <a class="nav-link hellomed-accent" href="/artikel">Artikel</a>
                     </li>
                     <li class="nav-item me-2">
-                        <a class="nav-link hellomed-accent" href="#">Tanya Dokter</a>
+                        <a class="nav-link hellomed-accent" href="/hellomedicine_artikel.html">Tanya Dokter</a>
                     </li>
                     <li class="nav-item me-2">
                         <a class="nav-link hellomed-accent" href="#">Rumah Sakit</a>
@@ -58,9 +63,17 @@
 
             <div class="col-2">
                 <div class="text-end">
-                    <button class="btn btn-outline-success me-2" type="button"
-                        style="margin-right: 30px;">Login</button>
-                    <button class="btn btn-success" type="button">Daftar</button>
+                    @auth
+                        Welcome, {{ auth()->user()->username }}
+                        <form action="/logout">
+                            @csrf
+                            <button type="submit" class="btn btn-warning me-2">Logout</button>
+                        </form>
+                    @else
+                        <a href="/login"><button class="btn btn-outline-success me-2" type="button"
+                            style="margin-right: 30px;">Login</button></a> 
+                        <a href="/register"><button class="btn btn-success" type="button">Daftar</button></a>    
+                    @endauth
                 </div>
             </div>
         </div>
@@ -68,28 +81,9 @@
     </nav>
 
     <div class=" p-5 mb-4 rounded-3">
-        <div class="container-fluid py-5">
-            <h1 class="hellomed-h1">Artikel Kesehatan Terkini</h1>
-            <p class="col-md-8 fs-4"> </p>
-            <!-- <img src="dokter.jpeg" class="imageRight"> -->
-            <div class="row">
-                @foreach ($posts as $post)
-                <div class="col-sm-4 mt-4">
-                    <div class="card" style="width: 28rem;">
-                        <img class="card-img-top" src="img/card1.jpg" alt="Card image cap">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">{{ $post['title'] }}</h5>
-                            <p class="card-text">{{ $post['excerpt'] }}</p>
-                            <a href="/artikel/{{$post->slug}}" class="btn btn-primary">Go to article</a>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-            <div class="d-flex justify-content center">
-                {{ $posts -> links() }}
-            </div>
-        </div>
+        {{-- <p>in Category {{ $posts->category->name }}</p> --}}
+        <h2>{{ $posts->title }}</h2>
+        {{ $posts->body }}
     </div>
 
 

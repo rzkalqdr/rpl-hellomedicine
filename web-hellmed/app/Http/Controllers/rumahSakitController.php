@@ -20,6 +20,12 @@ class rumahSakitController extends Controller
         ]);
     }
 
+    public function index_rs()
+    {
+        return view('homepage_rumahsakit', [
+            'rumahsakit' => RumahSakit::all()
+        ]);
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -6,7 +6,9 @@ use App\Http\Controllers\registerController;
 use App\Http\Controllers\rumahSakitController;
 use App\Http\Controllers\dashboardUserController;
 use App\Http\Controllers\dashboardApotekController;
+use App\Http\Controllers\dashboardArtikelController;
 use App\Http\Controllers\dashboardDokterController;
+use App\Http\Controllers\postController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,8 @@ use App\Http\Controllers\dashboardDokterController;
 Route::get('/register', [registerController::class, 'index'])->middleware('guest');
 Route::post('/register', [registerController::class, 'store']);
 
+Route::get('/rumahsakit', [rumahSakitController::class, 'index_rs']);
+
 Route::get('/login', [loginController::class, 'index'])->middleware('guest');
 Route::post('/login', [loginController::class, 'authenticate']);
 Route::get('/logout', [loginController::class, 'logout']);
@@ -32,6 +36,8 @@ Route::resource('/dashboard/rumahsakit', rumahSakitController::class)->middlewar
 Route::resource('/dashboard/users', dashboardUserController::class)->middleware('is_admin');
 Route::resource('/dashboard/apotek', dashboardApotekController::class)->middleware('is_admin');
 Route::resource('/dashboard/dokter', dashboardDokterController::class)->middleware('is_admin');
+Route::resource('/dashboard/artikel', dashboardArtikelController::class)->middleware('is_admin');
+Route::get('/dashboard/artikel/checkSlug', [dashboardArtikelController::class, 'checkSlug'])->middleware('is_admin');
 
 Route::get('/', function() {
     return view('homepage', [
@@ -40,9 +46,5 @@ Route::get('/', function() {
     ]);
 })->name('home');
 
-Route::get('/artikel', function() {
-    return view('artikel', [
-        'title' => 'Artikel',
-        'active' => 'artikel'
-    ]);
-})->name('artikel');
+Route::get('/artikel', [postController::class, 'index'])->name('artikel');
+Route::get('artikel/{post:slug}', [postController::class, 'Show']);

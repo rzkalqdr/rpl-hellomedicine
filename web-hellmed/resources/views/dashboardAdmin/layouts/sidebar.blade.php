@@ -17,5 +17,11 @@
         <li class="nav-item">
             <a class="nav-link {{ Request::is('/dashboard/apotek') ? 'active' : '' }}" style="color: aliceblue" href="/dashboard/apotek"> <span><i class="fa-solid fa-capsules"></i></span> Apotek</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link {{ Request::is('/dashboard/dokter') ? 'active' : '' }}" style="color: aliceblue" href="/dashboard/dokter"> <span><i class="fa-solid fa-user-doctor"></i></span> Dokter</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {{ Request::is('/dashboard/artikel') ? 'active' : '' }}" style="color: aliceblue" href="/dashboard/artikel"> <span><i class="fa-solid fa-newspaper"></i></span> Artikel</a>
+        </li>
     </ul>
 </nav>
