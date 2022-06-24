@@ -119,7 +119,7 @@ class dashboardArtikelController extends Controller
      */
     public function destroy(Post $post)
     {
-        Post::destroy($post->slug);
+        Post::destroy($post->id);
         return redirect('/dashboard/artikel')->with('success', 'Artikel delete Successfully!');
     }
 

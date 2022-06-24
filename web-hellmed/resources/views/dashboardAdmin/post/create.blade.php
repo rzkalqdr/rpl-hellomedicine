@@ -7,7 +7,7 @@
         <h3 class="mb-2 text-center">Tambah Artikel</h3>
             <div class="row mb-3">
                 <label for="title" class="col-sm-2 col-form-label">Judul</label>
-                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" required value="{{ old('title') }}"> 
+                <input type="text" class="form-control" name="title" id="title"> 
                 @error('title')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -16,12 +16,7 @@
             </div>
             <div class="row mb-3">
                 <label for="slug" class="col-sm-2 col-form-label">Slug</label>
-                <input type="text" class="form-control @error('slug') is-invalid @enderror" name="slug" required value="{{ old('slug') }}"> 
-                @error('slug')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                @enderror
+                <input type="text" class="form-control" id="slug" name="slug"> 
             </div>
             <div class="row mb-3">
                 <label for="category" class="col-sm-2 col-form-label">Category</label>
@@ -41,5 +36,16 @@
             <button type="submit" name="submit" class="btn btn-primary">Create</button>
     </form>
 </div>
-    
+
+{{-- <script type="text/javascript">
+    const title = document.querySelector('#title');
+    const slug = document.querySelector('#slug');
+
+    title.addEventListener('change', function(){
+        fetch('/dashboard/artikel/checkSlug?title=' + title.value)
+            .then(response => response.json())
+            .then(data => slug.value = data.slug)
+    });
+</script> --}}
+
 @endsection

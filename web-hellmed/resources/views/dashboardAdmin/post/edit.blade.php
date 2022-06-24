@@ -5,7 +5,7 @@
     <form action="/dashboard/artikel/{{ $post->slug }}" method="POST">
         @method('PUT')
         @csrf
-        <h3 class="mb-2 text-center">Tambah Artikel</h3>
+        <h3 class="mb-2 text-center">Edit Artikel</h3>
             <div class="row mb-3">
                 <label for="title" class="col-sm-2 col-form-label">Judul</label>
                 <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" required value="{{ old('title', $post->title) }}"> 

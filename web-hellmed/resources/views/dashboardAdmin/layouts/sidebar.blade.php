@@ -15,13 +15,16 @@
             <a class="nav-link {{ Request::is('/dashboard/users') ? 'active' : '' }}" style="color: aliceblue" href="/dashboard/users"> <span><i class="fa-solid fa-users"></i></span> User</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('/dashboard/apotek') ? 'active' : '' }}" style="color: aliceblue" href="/dashboard/apotek"> <span><i class="fa-solid fa-capsules"></i></span> Apotek</a>
+            <a class="nav-link {{ Request::is('/dashboard/apotek') ? 'active' : '' }}" style="color: aliceblue" href="/dashboard/apotek"> <span><i class="fa-solid fa-mortar-pestle"></i></span> Apotek</a>
         </li>
         <li class="nav-item">
             <a class="nav-link {{ Request::is('/dashboard/dokter') ? 'active' : '' }}" style="color: aliceblue" href="/dashboard/dokter"> <span><i class="fa-solid fa-user-doctor"></i></span> Dokter</a>
         </li>
         <li class="nav-item">
             <a class="nav-link {{ Request::is('/dashboard/artikel') ? 'active' : '' }}" style="color: aliceblue" href="/dashboard/artikel"> <span><i class="fa-solid fa-newspaper"></i></span> Artikel</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {{ Request::is('/dashboard/obat') ? 'active' : '' }}" style="color: aliceblue" href="/dashboard/obat"> <span><i class="fa-solid fa-capsules"></i></span> Obat</a>
         </li>
     </ul>
 </nav>

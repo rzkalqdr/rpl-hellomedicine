@@ -18,8 +18,12 @@ return new class extends Migration
             $table->string('displayname');
             $table->string('username');
             $table->string('password');
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             $table->boolean('is_admin')->default(false);
             $table->boolean('is_dokter')->default(false);
+            $table->string('alamat')->nullable();
+            $table->string('nohp')->nullable();
         });
     }
 
